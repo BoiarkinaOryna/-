@@ -5,85 +5,85 @@ import modules.victory as m_victory
 def broken_ship(list_cells, index, x, y, screen):
     value = list_cells[index]
     if value == 14:
-        # if index + 10 <= 99 and index + 20 <= 99 and index + 30 <= 99:
+        if index + 10 <= 99 and index + 20 <= 99 and index + 30 <= 99:
             if list_cells[index + 10] == value and list_cells[index + 20] == value and list_cells[index + 30] == value:
                 ship4 = m_settings.Ship4(x1 = x, y1 = y, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = True)
-        # elif index + 10 <= 99 and index + 20 <= 99 and index - 10 <= 99:
+        if index + 10 <= 99 and index + 20 <= 99 and index - 10 <= 99:
             if list_cells[index + 10] == value and list_cells[index + 20] == value and list_cells[index - 10] == value:
                 ship4 = m_settings.Ship4(x1 = x - 35, y1 = y, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = True)
-        # elif index + 10 <= 99 and index - 20 <= 99 and index - 10 <= 99:
+        if index + 10 <= 99 and index - 20 <= 99 and index - 10 <= 99:
             if list_cells[index + 10] == value and list_cells[index - 20] == value and list_cells[index - 10] == value:
                 ship4 = m_settings.Ship4(x1 = x - 70, y1 = y, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = True)
-        # elif index - 10 <= 99 and index - 20 <= 99 and index - 30 <= 99:
+        if index - 10 <= 99 and index - 20 <= 99 and index - 30 <= 99:
             if list_cells[index - 10] == value and list_cells[index - 20] == value and list_cells[index - 30] == value:
                 ship4 = m_settings.Ship4(x1 = x - 105, y1 = y, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = True)
-        # elif index + 1 <= 99 and index + 2 <= 99 and index + 3 <= 99:
+        if index + 1 <= 99 and index + 2 <= 99 and index + 3 <= 99:
             if list_cells[index + 1] == value and list_cells[index + 2] == value and list_cells[index + 3] == value:
                 ship4 = m_settings.Ship4(x1 = x, y1 = y, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = False)
-        # elif index + 1 <= 99 and index + 2 <= 99 and index - 1 <= 99:
+        if index + 1 <= 99 and index + 2 <= 99 and index - 1 <= 99:
             if list_cells[index + 1] == value and list_cells[index + 2] == value and list_cells[index - 1] == value:
                 ship4 = m_settings.Ship4(x1 = x, y1 = y - 35, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = False)
-        # elif index + 1 <= 99 and index - 2 <= 99 and index - 1 <= 99:
+        if index + 1 <= 99 and index - 2 <= 99 and index - 1 <= 99:
             if list_cells[index + 1] == value and list_cells[index - 2] == value and list_cells[index - 1] == value:
                 ship4 = m_settings.Ship4(x1 = x, y1 = y - 70, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = False)
-        # elif index - 1 <= 99 and index - 2 <= 99 and index - 3 <= 99:
+        if index - 1 <= 99 and index - 2 <= 99 and index - 3 <= 99:
             if list_cells[index - 1] == value and list_cells[index - 2] == value and list_cells[index - 3] == value:
                 ship4 = m_settings.Ship4(x1 = x, y1 = y - 105, name_file1 = "images/broken4.png")
                 ship4.blit_sprite(screen_game = screen, flip = False)
     if value == 13:
-        # elif index + 1 <= 99 and index + 2 <= 99:
-        if index // 10 == (index + 1) // 10 and (index + 1) // 10 == (index + 2) // 10:
-            if list_cells[index + 1] == value and list_cells[index + 2] == value:
+        if index + 1 <= 99 and index + 2 <= 99:
+            if index // 10 == (index + 1) // 10 and (index + 1) // 10 == (index + 2) // 10:
+                if list_cells[index + 1] == value and list_cells[index + 2] == value:
+                    ship3 = m_settings.Ship3(x1 = x, y1 = y, name_file1 = "images/broken3.png")
+                    ship3.blit_sprite(screen_game = screen, flip = False)
+        if index - 1 <= 99 and index + 1 <= 99:
+            if index // 10 == (index - 1) // 10 and (index - 1) // 10 == (index + 1) // 10:
+                if list_cells[index - 1] == value and list_cells[index + 1] == value:
+                    ship3 = m_settings.Ship3(x1 = x, y1 = y - 35, name_file1 = "images/broken3.png")
+                    ship3.blit_sprite(screen_game = screen, flip = False)
+        if index - 2 <= 99 and index - 1 <= 99:
+            if index // 10 == (index - 1) // 10 and (index - 1) // 10 == (index - 2) // 10:
+                if list_cells[index - 2] == value and list_cells[index - 1] == value:
+                    ship3 = m_settings.Ship3(x1 = x, y1 = y - 70, name_file1 = "images/broken3.png")
+                    ship3.blit_sprite(screen_game = screen, flip = False)
+        if index + 10 <= 99 and index + 20 <= 99:
+            if list_cells[index + 10] == value and list_cells[index + 20] == value:
                 ship3 = m_settings.Ship3(x1 = x, y1 = y, name_file1 = "images/broken3.png")
-                ship3.blit_sprite(screen_game = screen, flip = False)
-        # elif index - 1 <= 99 and index + 1 <= 99:
-        elif index // 10 == (index - 1) // 10 and (index - 1) // 10 == (index + 1) // 10:
-            if list_cells[index - 1] == value and list_cells[index + 1] == value:
-                ship3 = m_settings.Ship3(x1 = x, y1 = y - 35, name_file1 = "images/broken3.png")
-                ship3.blit_sprite(screen_game = screen, flip = False)
-        # elif index - 2 <= 99 and index - 1 <= 99:
-        elif index // 10 == (index - 1) // 10 and (index - 1) // 10 == (index - 2) // 10:
-            if list_cells[index - 2] == value and list_cells[index - 1] == value:
-                ship3 = m_settings.Ship3(x1 = x, y1 = y - 70, name_file1 = "images/broken3.png")
-                ship3.blit_sprite(screen_game = screen, flip = False)
-    # if index + 10 <= 99 and index + 20 <= 99:
-        if list_cells[index + 10] == value and list_cells[index + 20] == value:
-            ship3 = m_settings.Ship3(x1 = x, y1 = y, name_file1 = "images/broken3.png")
-            ship3.blit_sprite(screen_game = screen, flip = True)
-    # elif index - 10 <= 99 and index + 10 <= 99:
-        if list_cells[index - 10] == value and list_cells[index + 10] == value:
-            ship3 = m_settings.Ship3(x1 = x - 35, y1 = y, name_file1 = "images/broken3.png")
-            ship3.blit_sprite(screen_game = screen, flip = True)
-    # elif index - 20 <= 99 and index - 10 <= 99:
-        if list_cells[index - 20] == value and list_cells[index - 10] == value:
-            ship3 = m_settings.Ship3(x1 = x - 70, y1 = y, name_file1 = "images/broken3.png")
-            ship3.blit_sprite(screen_game = screen, flip = True)
+                ship3.blit_sprite(screen_game = screen, flip = True)
+        if index - 10 <= 99 and index + 10 <= 99:
+            if list_cells[index - 10] == value and list_cells[index + 10] == value:
+                ship3 = m_settings.Ship3(x1 = x - 35, y1 = y, name_file1 = "images/broken3.png")
+                ship3.blit_sprite(screen_game = screen, flip = True)
+        if index - 20 <= 99 and index - 10 <= 99:
+            if list_cells[index - 20] == value and list_cells[index - 10] == value:
+                ship3 = m_settings.Ship3(x1 = x - 70, y1 = y, name_file1 = "images/broken3.png")
+                ship3.blit_sprite(screen_game = screen, flip = True)
     if value == 12:
-        # elif index + 1 <= 99:
-        if index // 10 == (index + 1) // 10:
-            if list_cells[index + 1] == value:
+        if index + 1 <= 99:
+            if index // 10 == (index + 1) // 10:
+                if list_cells[index + 1] == value:
+                    ship2 = m_settings.Ship2(x1 = x, y1 = y, name_file1 = "images/broken2.png")
+                    ship2.blit_sprite(screen_game = screen, flip = False)
+        if index - 1 <= 99:
+            if index // 10 == (index - 1) // 10:
+                if list_cells[index - 1] == value:
+                    ship2 = m_settings.Ship2(x1 = x, y1 = y - 35, name_file1 = "images/broken2.png")
+                    ship2.blit_sprite(screen_game = screen, flip = False)
+        if index + 10 <= 99:
+            if list_cells[index + 10] == value:
                 ship2 = m_settings.Ship2(x1 = x, y1 = y, name_file1 = "images/broken2.png")
-                ship2.blit_sprite(screen_game = screen, flip = False)
-        # elif index - 1 <= 99:
-        elif index // 10 == (index - 1) // 10:
-            if list_cells[index - 1] == value:
-                ship2 = m_settings.Ship2(x1 = x, y1 = y - 35, name_file1 = "images/broken2.png")
-                ship2.blit_sprite(screen_game = screen, flip = False)
-    # if index + 10 <= 99:
-        if list_cells[index + 10] == value:
-            ship2 = m_settings.Ship2(x1 = x, y1 = y, name_file1 = "images/broken2.png")
-            ship2.blit_sprite(screen_game = screen, flip = True)
-    # elif index - 10 <= 99:
-        if list_cells[index - 10] == value:
-            ship2 = m_settings.Ship2(x1 = x - 35, y1 = y, name_file1 = "images/broken2.png")
-            ship2.blit_sprite(screen_game = screen, flip = True)
+                ship2.blit_sprite(screen_game = screen, flip = True)
+        if index - 10 <= 99:
+            if list_cells[index - 10] == value:
+                ship2 = m_settings.Ship2(x1 = x - 35, y1 = y, name_file1 = "images/broken2.png")
+                ship2.blit_sprite(screen_game = screen, flip = True)
     if value == 11:
             print("1")
             ship1 = m_settings.Ship1(x1 = x, y1 = y, name_file1 = "images/broken1.png")

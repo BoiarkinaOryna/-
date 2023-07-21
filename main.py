@@ -1,8 +1,6 @@
 import pygame
-# import modules.coordinates as m_coordinates
 import modules.settings as m_settings
 import modules.choose_ship as m_ship
-# import modules.bot_ship_installation as m_installation
 import modules.battle as m_battle
 import modules.data_base as m_data
 
@@ -32,7 +30,6 @@ while game:
             print(lst_y)
             if m_data.battle_start == False:
                 m_ship.draw_ship(window = screen, x = int(lst_x[0]), y = int(lst_y[0]))
-                # m_installation.bot_ship_installation()
             if m_data.battle_start == True:
                 m_battle.control_step(screen = screen, x = int(lst_x[0]), y = int(lst_y[0]))
             

@@ -45,22 +45,16 @@ def draw_ship(window, x, y):
                 elif m_data.num_step == 6 or m_data.num_step == 7 or m_data.num_step == 8 or m_data.num_step == 9:
                     ship1.blit_sprite(screen_game= window, flip = False)
                     m_data.my_ship = ship1
-                    # m_data.ship_len = 1
                     m_data.installed_ship = True
-                    # if m_data.num_step < 10:
-                        # m_data.num_step += 1
-                if m_data.num_step >= 10:
-                    # m_data.num_step += 1
-                    m_data.installed_or_not_installed_ships  = True
-                    # print("break_positioning  True = " + str(m_data.installed_or_not_installed_ships ))
             elif x > 250 and x < 300 and y > 600 and y < 650:
                 flip(window = window, my_ship = m_data.my_ship)
             elif x >= 106 and x <= 460 and y >= 91 and y <= 437:
-                # if m_data.break_positioning == False:
                 m_coordinates.step(window_game = window, x_click = int(x), y_click = int(y), my_ship = m_data.my_ship)
                 m_data.installed_ship = False
+                if m_data.num_step >= 10:
+                    m_data.installed_or_not_installed_ships = True
             
-    elif m_data.installed_or_not_installed_ships == True:
+    if m_data.installed_or_not_installed_ships == True:
         m_installation.bot_ship_installation()
 
 def flip(window, my_ship):

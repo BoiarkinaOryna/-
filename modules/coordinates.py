@@ -33,7 +33,7 @@ def step(window_game, x_click, y_click, my_ship):
                                             elif m_data.bool_drawing == True:
                                                 my_ship.blit_sprite(screen_game = window_game, flip = m_data.rotate_ship)
                                                 m_data.bool_drawing = False
-                                                m_data.ships_stop_rotation = True
+                                                # m_data.ships_stop_rotation = True
                                                 m_data.num_step += 1
                                                 # print(m_data.list_cells)
                                                 # print(m_data.num_ship)
