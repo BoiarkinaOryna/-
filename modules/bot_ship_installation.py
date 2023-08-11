@@ -7,20 +7,20 @@ def bot_ship_installation():
     ship = 4
     if not m_data.ships_stop_rotation:
         while m_data.bot_num_ship < 10:
-            print("m_data.bot_num_ship =", m_data.bot_num_ship)
-            print("ship = " + str(ship))
+            # print("m_data.bot_num_ship =", m_data.bot_num_ship)
+            # print("ship = " + str(ship))
             coordinate = random.randint(0, 99)
             bot_ship_rotation = random.choice([True, False])
-            print("1")
-            print("bot_ship_rotation =", bot_ship_rotation)
+            # print("1")
+            # print("bot_ship_rotation =", bot_ship_rotation)
             if bot_ship_rotation == False:
-                    print("F2")
+                    # print("F2")
                     if coordinate <= 99:
-                        print("F3")
+                        # print("F3")
                         if m_data.bot_list_cells[coordinate] == 0:
                             units = coordinate % 10
-                            print("m_data.bot_num_ship =", m_data.bot_num_ship)
-                            print("units =", units)
+                            # print("m_data.bot_num_ship =", m_data.bot_num_ship)
+                            # print("units =", units)
                             if m_data.bot_num_ship == 0:
                                 if units < 7:
                                     if m_data.bot_list_cells[coordinate + 1] == 0 and m_data.bot_list_cells[coordinate + 2] == 0 and m_data.bot_list_cells[coordinate + 3] == 0:
@@ -56,13 +56,13 @@ def bot_ship_installation():
                                     m_data.bot_num_ship += 1
                                    
             elif bot_ship_rotation == True:
-                    print("T2")
+                    # print("T2")
                     if coordinate <= 99:
-                        print("T3")
+                        # print("T3")
                         if m_data.bot_list_cells[coordinate] == 0:
                             tens = coordinate // 10
-                            print("m_data.bot_num_ship =", m_data.bot_num_ship)
-                            print("tens =", tens)
+                            # print("m_data.bot_num_ship =", m_data.bot_num_ship)
+                            # print("tens =", tens)
                             if m_data.bot_num_ship == 0:
                                 if tens < 7:
                                     if m_data.bot_list_cells[coordinate + 10] == 0 and m_data.bot_list_cells[coordinate + 20] == 0  and m_data.bot_list_cells[coordinate + 30] == 0:

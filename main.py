@@ -26,8 +26,8 @@ while game:
             lst_y = list(event.pos)
             del lst_x[-1]
             del lst_y[-2]
-            print(lst_x)
-            print(lst_y)
+            # print(lst_x)
+            # print(lst_y)
             if m_data.battle_start == False:
                 m_ship.draw_ship(window = screen, x = int(lst_x[0]), y = int(lst_y[0]))
             if m_data.battle_start == True:

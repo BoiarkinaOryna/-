@@ -50,3 +50,4 @@ bot_step = False
 self_cells = [-1]
 bot_cells = [-1]
 bot_num_ship = 0
+next_step = True
