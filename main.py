@@ -3,6 +3,7 @@ import modules.settings as m_settings
 import modules.choose_ship as m_ship
 import modules.battle as m_battle
 import modules.data_base as m_data
+import modules.victory as m_victory
 
 pygame.init()
 FPS = pygame.time.Clock()
@@ -11,8 +12,7 @@ screen = pygame.display.set_mode((1000, 700))
 screen.fill((102, 178, 255))
 m_settings.board.blit_sprite(screen_game = screen, flip = False)
 m_settings.bot_board.blit_sprite(screen_game= screen, flip = False)
-mark = m_settings.Mark()
-mark.blit_sprite(screen_game= screen, flip = False)
+m_settings.mark.blit_sprite(screen_game= screen, flip = False)
 game = True
 
 while game:
@@ -32,6 +32,7 @@ while game:
                 m_ship.draw_ship(window = screen, x = int(lst_x[0]), y = int(lst_y[0]))
             if m_data.battle_start == True:
                 m_battle.control_step(screen = screen, x = int(lst_x[0]), y = int(lst_y[0]))
+            m_victory.reset(screen1 = screen, x = int(lst_x[0]), y = int(lst_y[0]))
             
 
     pygame.display.flip()

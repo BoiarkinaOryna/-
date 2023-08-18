@@ -10,8 +10,7 @@ def draw_ship(window, x, y):
     ship3 = m_settings.Ship3(x1 = 100, y1 = 500)
     ship2 = m_settings.Ship2(x1 = 100, y1 = 500)
     ship1 = m_settings.Ship1(x1 = 100, y1 = 500)
-    plain = m_settings.Plain()
-    plain.blit_sprite(screen_game= window, flip = False)
+    m_settings.plain.blit_sprite(screen_game= window, flip = False)
     if m_data.installed_or_not_installed_ships == False:
         if m_data.ships_stop_rotation == True:
             m_data.my_ship = None
@@ -23,27 +22,26 @@ def draw_ship(window, x, y):
                     window.fill((102, 178, 255))
                     m_settings.board.blit_sprite(screen_game = window, flip = False)
                     m_settings.bot_board.blit_sprite(screen_game= window, flip = False)
-                    mark = m_settings.Mark()
-                    mark.blit_sprite(screen_game= window, flip = False)
-                    ship4.blit_sprite(screen_game= window, flip = False)
+                    m_settings.mark.blit_sprite(screen_game= window, flip = False)
+                    ship4.blit_sprite(screen_game= window, flip = m_data.rotate_ship)
                     
                     m_data.my_ship = ship4
                     m_data.installed_ship = True
                     # m_data.ship_len = 4
                 elif m_data.num_step == 1 or m_data.num_step == 2:
-                    ship3.blit_sprite(screen_game= window, flip = False)
+                    ship3.blit_sprite(screen_game= window, flip = m_data.rotate_ship)
                     # m_data.num_step += 1
                     m_data.my_ship = ship3
                     m_data.installed_ship = True
                     # m_data.ship_len = 3
                 elif m_data.num_step == 3 or m_data.num_step == 4 or m_data.num_step == 5:
-                    ship2.blit_sprite(screen_game= window, flip = False)
+                    ship2.blit_sprite(screen_game= window, flip = m_data.rotate_ship)
                     # m_data.num_step += 1
                     m_data.my_ship = ship2
                     m_data.installed_ship = True
                     # m_data.ship_len = 2
                 elif m_data.num_step == 6 or m_data.num_step == 7 or m_data.num_step == 8 or m_data.num_step == 9:
-                    ship1.blit_sprite(screen_game= window, flip = False)
+                    ship1.blit_sprite(screen_game= window, flip = m_data.rotate_ship)
                     m_data.my_ship = ship1
                     m_data.installed_ship = True
             elif x > 250 and x < 300 and y > 600 and y < 650:
@@ -72,3 +70,4 @@ def flip(window, my_ship):
         my_ship.Y = 500
         m_data.rotate_ship = False
         my_ship.blit_sprite(screen_game= window, flip = False)
+        

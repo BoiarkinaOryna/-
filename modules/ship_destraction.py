@@ -90,7 +90,7 @@ def broken_ship(list_cells, index, x, y, screen):
             bool = random.choice([True, False])
             ship1.blit_sprite(screen_game = screen, flip = bool)
 
-    m_victory.victory(list_cells1 = list_cells)
+    m_victory.victory(list_cells1 = list_cells, window = screen)
 def defated_ship(list_cells1, index1, x1, y1, screen1):
     if list_cells1[index1] == 4:
         list_cells1[index1] = 14

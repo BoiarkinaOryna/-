@@ -62,3 +62,6 @@ class Plain(Figure):
 class Explosion(Figure):
     def __init__(self, width1 = 25, height1 = 25, x1 = 0, y1 = 0, name_file1 = 'images/explosion.png'):
         Figure.__init__(self, width = width1, height = height1, x = x1, y = y1, name_file = name_file1)
+
+mark = Mark()
+plain = Plain()
