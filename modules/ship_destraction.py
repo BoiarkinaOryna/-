@@ -85,7 +85,6 @@ def broken_ship(list_cells, index, x, y, screen):
                 ship2 = m_settings.Ship2(x1 = x - 35, y1 = y, name_file1 = "images/broken2.png")
                 ship2.blit_sprite(screen_game = screen, flip = True)
     if value == 11:
-            print("1")
             ship1 = m_settings.Ship1(x1 = x, y1 = y, name_file1 = "images/broken1.png")
             bool = random.choice([True, False])
             ship1.blit_sprite(screen_game = screen, flip = bool)
@@ -100,5 +99,4 @@ def defated_ship(list_cells1, index1, x1, y1, screen1):
         list_cells1[index1] = 12
     elif list_cells1[index1] == 1:
         list_cells1[index1] = 11
-    print("list_cells1 =", list_cells1)
     broken_ship(list_cells = list_cells1, index = index1, x = x1, y = y1, screen = screen1)

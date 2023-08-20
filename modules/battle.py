@@ -5,8 +5,8 @@ import modules.coordinates as m_coordinates
 import modules.ship_destraction as m_destruction
 def strike(x_click, y_click, window, start, list_coordinates_x, list_cells, next_step1):
     if start:
-        if list_cells == m_data.bot_list_cells:
-            print("list_cells =", list_cells)
+        # if list_cells == m_data.bot_list_cells:
+            # print("list_cells =", list_cells)
         index_x = -1
         index_y = -1
         for count_x in list_coordinates_x:

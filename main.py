@@ -13,6 +13,10 @@ screen.fill((102, 178, 255))
 m_settings.board.blit_sprite(screen_game = screen, flip = False)
 m_settings.bot_board.blit_sprite(screen_game= screen, flip = False)
 m_settings.mark.blit_sprite(screen_game= screen, flip = False)
+font = pygame.font.SysFont("Courier New", 30)
+text = font.render("Tab here to expose the ship", 5, (50, 25, 0))
+screen.blit(text, (20, 550))
+
 game = True
 
 while game:

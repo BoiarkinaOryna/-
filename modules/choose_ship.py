@@ -56,7 +56,6 @@ def draw_ship(window, x, y):
         m_installation.bot_ship_installation()
 
 def flip(window, my_ship):
-    print("my_ship = " + str(my_ship))
     if my_ship == None:
         pass
     

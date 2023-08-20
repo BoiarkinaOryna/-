@@ -1,5 +1,7 @@
 import modules.data_base as m_data
 import modules.settings as m_settings
+import pygame
+pygame.init
 
 def victory(list_cells1, window):
     count = 0
@@ -7,7 +9,6 @@ def victory(list_cells1, window):
         if value == 11 or value == 12 or value == 13 or value == 14:
             count += 1
             if count == 20:
-                print("victory")
                 m_data.battle_start = "None"
                 reset_button = m_settings.Mark(x1 = 400, y1 = 450, width1 = 200, height1 = 100, name_file1 = "images/reset.png")
                 reset_button.blit_sprite(screen_game = window)
@@ -18,6 +19,9 @@ def reset(screen1, x, y):
         m_settings.board.blit_sprite(screen_game = screen1, flip = False)
         m_settings.bot_board.blit_sprite(screen_game= screen1, flip = False)
         m_settings.mark.blit_sprite(screen_game= screen1, flip = False)
+        font = pygame.font.SysFont("Courier New", 30)
+        text = font.render("Tab here to expose the ship", 5, (50, 25, 0))
+        screen1.blit(text, (20, 550))
         m_data.battle_start = False
         m_data.list_cells = [
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
